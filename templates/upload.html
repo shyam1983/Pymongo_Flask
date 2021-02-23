@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+	<title>MyPage Login</title>
+	<link rel="stylesheet" type = "text/css"  href="{{ url_for('static', filename='style.css') }}">
+</head>
+{% if filenames %}
+	{% for filename1 in filenames %}
+		<div>
+			<img src="{{ url_for(filename1) }}">
+		</div>
+	{% endfor %}
+{% endif %}
+<body>
+<section class="wrapper">
+	<h2 class="h2 mt-0 text-center jumbo"><p style="color:rgba(10, 8, 3, 0.788)">Fill Details and Upload Images</p></h2>
+
+	<div class="container-fluid mt-5">
+		<div class="row m-0">
+			<div class="col-sm-6 col-md-6">
+				<form action = "{{url_for('face_upload')}}" style="color:rgba(14, 5, 5, 0.733)" method = "POST" enctype = "multipart/form-data">
+					<div class="form-group mt-3"></div><br><br>
+					<div class="ver">
+					<label for="Front">Front:</label>
+					<input type="file" name="admin-images1" required/>
+					<label for="Left">Left:</label>
+					<input type="file" name="admin-images2" required/>
+					<label for="Right">Right:</label>
+					<input type="file" name="admin-images3" required/>
+					</div><br><br>
+					<div class="buttonHolder">
+					<label for="Name">Name:</label>
+					<input id="Name" name="Name"><br><br>
+					<label for="Model">Model No.:</label>
+					<input id="Model" name="Model" ><br><br>
+					<label for="Price">Price:</label>
+					<input id="Price" name="Price" >
+				    </div><br><br>
+					<h1 style = "margin-left:170px"> DESCRIPTION </h1>
+					<h4 style = "margin-left:170px"> Discount => </h4><br>
+					<div class="buttonHolder">
+					<label > After Discount: </label>
+					<input id="After_Discount" name="After_Discount"><br><br><br>
+					</div>
+					<input type="submit" value="SUBMIT" style = "margin-left:350px">
+					<p >
+						{% with messages = get_flashed_messages() %}
+						  {% if messages %}
+							<ul class=flashes style = "text-align: center">
+							{% for message in messages %}
+							  <li>{{ message }}</li>
+							{% endfor %}
+							</ul>
+						  {% endif %}
+						{% endwith %}
+					</p>
+					</dv>
+				</form>
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+<script src="static/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="static/js/bootstrap.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+</script>
+
+</body>
+</html> 
+
+

@@ -1,0 +1,85 @@
+
+
+body 
+	{
+	margin:50px 0px; 
+	padding:0px;
+	text-align:center;
+	text-align:center;
+	background-image: url("download.jpg");
+	height: 100%;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	}
+	
+form
+    {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	border-width:5px;  
+	border-style:groove;
+	
+    }
+	
+label,input 
+	{
+	display: inline-block;
+	width: 150px;
+	margin-bottom: 10px;
+	text-align: center;
+	}
+	
+label 
+	{
+	text-align: right;
+	width: 75px;
+	padding-right: 20px;
+	}
+	
+br
+	{
+	clear: left;
+	}
+
+	
+.buttonHolder
+			{ 
+  			text-align: center;
+		           
+			}
+
+.Holder
+			{ 
+  			text-align: center;
+		           
+			}
+
+
+.ver
+	{
+	display: block;
+	width: 100px;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid blue;    
+	background-color: yellow;
+	}	
+	
+.center{
+	text-align: center;
+}	
+
+
+
+
+
+
+
+
+
+	
+  
+    
